@@ -17,7 +17,7 @@ body, #content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgba(14, 14, 14, 0.986);
+    background-color: rgb(233, 226, 226);
 }
 
 #page1 #presentation {
@@ -30,30 +30,31 @@ body, #content {
 #page1 #presentation .title,
 #page1 #presentation .date {
     font-size: 27px;
-    color: rgb(224, 222, 68); 
+    color: rgba(0, 0, 0, 0.7)
 }
 
 #page1 #presentation .target { 
     font-size: 16px;
     line-height: 1.8;
-    color: white; 
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #page1 #activities {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     padding: 20px;
-    gap: 20px;
 }
 
 #page1 #activities .image-container {
     position: relative;
-    width: 25%;
+    width: 20%;
     height: 100%;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
+    margin: 20px;
 }
 
 #page1 #activities .image {
@@ -84,3 +85,33 @@ body, #content {
     opacity: 1;
 }
 
+#page1 .download {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#page1 .download img {
+    height: 35px;
+    width: 35px;
+    padding-right: 15px;
+}
+
+#page1 .download a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px; 
+    text-decoration: none; 
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7); 
+    border: none;
+}
+
+#page1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
+
+#page2 { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(14, 14, 14, 0.986);
+}
