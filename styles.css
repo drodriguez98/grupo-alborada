@@ -1,4 +1,4 @@
-
+/* Base CSS (ya está incluído en tu código original) */
 body, #content {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body, #content {
     background-color: rgb(233, 226, 226);
 }
 
-#page1 { 
+#page1, #page2 { 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -45,6 +45,7 @@ body, #content {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 #page1 #activities .image-container {
@@ -65,8 +66,6 @@ body, #content {
 }
 
 #page1 #activities .image-container:hover .image { transform: scale(1.1); }
-
-/* 
 
 #page1 .download {
     display: flex;
@@ -92,11 +91,9 @@ body, #content {
 
 #page1 .download a:hover { animation: tilt 0.25s ease infinite alternate; }
 
-*/
-
 #page2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -111,4 +108,73 @@ body, #content {
     width: 100%;
     height: auto; 
     border-radius: 10px;
+}
+
+/* Media Queries */
+
+/* Tablets and small screens */
+@media (max-width: 1024px) {
+    #page1 #presentation .title {
+        font-size: 22px;
+    }
+
+    #page1 #presentation .target {
+        font-size: 14px;
+    }
+
+    #page1 #activities .image-container {
+        width: 30%;
+    }
+
+    #page1 .download a {
+        font-size: 18px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .page {
+        height: auto;
+        padding: 20px;
+    }
+
+    #page1 #presentation .title {
+        font-size: 20px;
+    }
+
+    #page1 #presentation .target {
+        font-size: 12px;
+    }
+
+    #page1 #activities {
+        flex-direction: column;
+    }
+
+    #page1 #activities .image-container {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    #page1 .download a {
+        font-size: 16px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    #page1 #presentation .title {
+        font-size: 18px;
+    }
+
+    #page1 #presentation .target {
+        font-size: 10px;
+    }
+
+    #page1 #activities .image-container {
+        width: 90%;
+    }
+
+    #page1 .download a {
+        font-size: 14px;
+    }
 }
